@@ -1,0 +1,38 @@
+body {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.container {
+  min-height: 100vh;
+  box-shadow: 1px 11px 21px 18px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+
+.task-area {
+  border: 1px solid midnightblue;
+}
+
+.task-tabs {
+  display: flex;
+  border-bottom: 1px solid midnightblue;
+  position: relative;
+  div {
+    padding: 1rem;
+  }
+}
+
+#under-line {
+  height: 4px;
+  background-color: pink;
+  position: absolute;
+  width: 80px;
+  left: 0px;
+  top: 52px;
+  padding: 0px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
