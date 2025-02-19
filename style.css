@@ -36,3 +36,11 @@ body {
   justify-content: space-between;
   padding: 1rem;
 }
+
+.task-done-container {
+  background-color: gray;
+}
+
+.task-done {
+  text-decoration: line-through;
+}
