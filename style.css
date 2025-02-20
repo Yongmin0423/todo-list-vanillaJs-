@@ -1,39 +1,111 @@
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  background-color: rgba(0, 0, 0, 0.75);
+  font-family: "S-CoreDream-3Light";
+  color: white;
+  margin: 20px 0;
+  background: linear-gradient(#e66465, #ffffff);
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
-  min-height: 100vh;
-  box-shadow: 1px 11px 21px 18px rgba(0, 0, 0, 0.75);
-  background-color: white;
-}
-
-.task-area {
-  border: 1px solid midnightblue;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3c424a;
+  padding: 0;
 }
 
 .task-tabs {
   display: flex;
-  border-bottom: 1px solid midnightblue;
+  color: rgb(47, 47, 49);
+  justify-content: center;
+  border-bottom: 1px solid black;
   position: relative;
+  font-size: 1.5rem;
+  gap: 4rem;
   div {
     padding: 1rem;
+    cursor: pointer;
   }
 }
 
-#under-line {
-  height: 4px;
-  background-color: pink;
-  position: absolute;
-  width: 80px;
-  left: 0px;
-  top: 52px;
-  padding: 0px;
+.task-tabs .active {
+  color: white; /* 선택된 탭의 글자 색 */
+  font-weight: bold;
+}
+
+.main-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  .main-top__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+  }
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  gap: 0.5rem;
+  i {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+  #task-input {
+    flex-grow: 1;
+    padding: 0 2rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    background-color: RGB(52, 58, 64);
+    color: white;
+  }
+  #add-btn {
+    height: 3rem;
+  }
+}
+
+.task-area {
+  width: 90%;
+}
+
+#task-board {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .task {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
   padding: 1rem;
 }
 
@@ -43,4 +115,8 @@ body {
 
 .task-done {
   text-decoration: line-through;
+}
+
+.modal-content {
+  background-color: #3c424a;
 }
